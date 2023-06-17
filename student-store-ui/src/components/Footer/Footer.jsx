@@ -2,6 +2,7 @@ import React from 'react'
 import "./Footer.css"
 
 const Footer = () => {
+  // HTML tags needed for the footer section of the website
   return (
     <footer className="footer">
         <div className="content">
