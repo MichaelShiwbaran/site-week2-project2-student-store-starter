@@ -10,7 +10,6 @@ import ProductCard from '../ProductCard/ProductCard'
 const ProductView = (props) => {
   let shopping_cart = props.shoppingCart
   let setShopping_cart = props.setShoppingCart
- const [newItemCount, setNewItemCount] = useState(0)
   console.log(props.product)
   useEffect(() => {
     const fetchProducts = async () => {
@@ -54,6 +53,7 @@ const ProductView = (props) => {
         shoppingCart = {props.shoppingCart}
         setShoppingCart = {props.setShoppingCart}
         />
+        <p className='desc'>{correctProduct.description}</p>
 
         {/* <h1 className='product-id'>{`Product #: ${correctProduct.id}`}</h1>
       </div>

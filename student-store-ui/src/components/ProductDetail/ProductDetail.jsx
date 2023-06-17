@@ -8,6 +8,7 @@ import SubNavBar from '../SubNavbar/SubNavBar'
 const ProductDetail = (props) => {
   console.log(props.products)
   console.log(props.setIsFetching)
+  
   return (
     <div className='product-detail'>
           <Navbar />

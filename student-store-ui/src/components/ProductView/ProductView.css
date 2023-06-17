@@ -31,12 +31,11 @@
     font-size: 14px;
 }
 .product-card .desc{
-    padding: 8px 12px;
+    padding: 8px 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 600px;
-    width: 100%;
+    width: 50px;
 }
 .product-card  .actions .buttons {
     width: 80px;
@@ -58,3 +57,10 @@
     padding: 5px;
     margin: 10px 5px;
   }
+.desc {
+    padding: 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+}

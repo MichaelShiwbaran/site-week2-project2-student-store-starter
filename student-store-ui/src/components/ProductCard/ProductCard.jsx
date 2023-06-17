@@ -7,7 +7,12 @@ import ProductDetail from "../ProductDetail/ProductDetail"
 const ProductCard = (props) => {
 console.log(props.itemCount)
 const [itemCount, setItemCount] = useState(0)
+const [active, setActive] = useState(false)
 
+const handleActive = (event) => {
+  event.preventDefault();
+  setActive(true)
+}
   return (
     <div className='product-card'>
       <div className='picture'>
@@ -15,6 +20,7 @@ const [itemCount, setItemCount] = useState(0)
         {props.product.image? <img src={props.product.image} alt='productimage' /> : null}
         </a>
       </div>
+      
       <div className='product-info'>
         <div className='info'>
           <p className='product-name'>{props.product.name}</p>
