@@ -1,14 +1,25 @@
 import React from 'react'
+import "./ShoppingCartInfo.css"
 
 const ShoppingCartInfo = (props) => {
     console.log(props.product)
-    //uses passed props to print out the data of each product in the cart.
+    //prints a table of the shopping cart products
   return (
-    <div className='shopppingcart-info'>
-            <h3>Item: {props.product.productName}</h3>
-            <h3>Amount: {props.product.itemCount}</h3>
-            <h3>Price: {props.product.productPrice}</h3>
-            <h3>Cost: {props.product.productCost}</h3>
+    <div className='shoppingcart-info'>
+        <table>
+            <tr>
+            <th>Item: </th>
+            <th>Amount: </th>
+            <th>Price: </th>
+            <th>Cost: </th>
+            </tr>
+            <tr>
+            <th>{props.product.productName}</th>
+            <th>{props.product.itemCount}</th>
+            <th>{props.product.productPrice}</th>
+            <th>{props.product.productCost}</th>
+            </tr>
+        </table>
     </div>  
   )
 }
