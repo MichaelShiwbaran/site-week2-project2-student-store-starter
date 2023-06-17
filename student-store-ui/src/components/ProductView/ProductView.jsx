@@ -9,8 +9,10 @@ import ShoppingCart from '../ShoppingCart/ShoppingCart'
 const ProductView = (props) => {
   let shopping_cart = props.shoppingCart
   let setShopping_cart = props.setShoppingCart
+  //usestate to keep track of item count for the single product page section
  const [newItemCount, setNewItemCount] = useState(0)
   console.log(props.product)
+  //get API data
   useEffect(() => {
     const fetchProducts = async () => {
       props.setIsFetching(true)
@@ -41,7 +43,7 @@ const ProductView = (props) => {
           element.id == productID
     )
     product = product[0]
-  
+  // filters product based off te product that the user clicked and shows it on the screen
     return (
       <div>
       <div className='product-view'>
