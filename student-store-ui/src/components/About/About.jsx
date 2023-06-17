@@ -2,6 +2,7 @@ import React from 'react'
 import "./About.css"
 
 const About = () => {
+  // HTML tags used to display the About section of the page
   return (
     <div className='about' id='About'>
         <div className='content'>
