@@ -5,6 +5,7 @@ import ProductView from '../ProductView/ProductView'
 
 const ProductGrid = (props) => {
   console.log(props.shoppingCart)
+  //maps through the array of products and generates a product card for each one
   return (
     <div className='product-grid'>
     <div className='content'>
