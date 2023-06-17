@@ -6,6 +6,7 @@ import ShoppingCartTotal from "../ShoppingCartTotal/ShoppingCartTotal"
 
 export default function Sidebar(props) {
 
+  //use state to effect the way items are shown in the side bar
   const [sidebar, setSidebar] = useState(false)
 
   const showSidebar = () => setSidebar(!sidebar)
