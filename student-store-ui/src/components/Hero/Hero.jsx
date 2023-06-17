@@ -2,6 +2,7 @@ import React from 'react'
 import "./Hero.css"
 
 const Hero = () => {
+  //HTML tags needed for the hero section of the webpage 
   return (
     <div className = "hero">
       <div className="content">
