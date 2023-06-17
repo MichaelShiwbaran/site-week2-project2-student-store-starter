@@ -9,7 +9,7 @@ import Sidebar from "../Sidebar/Sidebar"
 
 export default function App() {
 
-
+// Creating the useStates needed for this website
 const [products, setProducts] = useState([])
 const [isFetching, setIsFetching] = useState(false)
 const [error, setError] = useState(null)
@@ -17,13 +17,14 @@ const [shoppingCart, setShoppingCart] = useState([])
 const [currentCategory, setCurrentCategory] = useState("All Categories")
 const [searchValue, setSearchValue] = useState("")
 
+  //function to change the searchvalue a user does
 const handleSearchValueChange = (event) => {
   event.preventDefault()
   setSearchValue(event.target.value)
 }
 
 
-
+// get API data
 useEffect(() => {
   const fetchProducts = async () => {
     setIsFetching(true)
@@ -40,7 +41,7 @@ useEffect(() => {
   fetchProducts()
 }, []);
 console.log(products)
-
+// returning the different main children component of the app parent with the necesary props.
   return (
     <div className="app">
       <BrowserRouter>
