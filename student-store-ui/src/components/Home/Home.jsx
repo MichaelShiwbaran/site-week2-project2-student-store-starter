@@ -11,14 +11,16 @@ import Sidebar from "../Sidebar/Sidebar"
 
 export default function Home(props) {
 
+  //filter prooducts by category
   const productsCategory = props.currentCategory.toLowerCase() !== "all categories"? 
   props.products.filter((product) => product.category === props.currentCategory.toLowerCase()) : props.products
 
+  //filter products by user search
   const currentProducts = Boolean(props.searchValue)? productsCategory.filter((products) =>
   products.name.toLowerCase().indexOf(props.searchValue.toLowerCase()) !== -1) : productsCategory
 
 
-
+// calling the children files for this parent file with the necessary props.
   return (
     <div className="home">
       <Navbar />
