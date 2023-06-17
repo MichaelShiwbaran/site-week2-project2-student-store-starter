@@ -17,7 +17,10 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 
 ### Video Walkthrough
 
-<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/76ca7c976c2c48809ff14c09a4540dcc?sid=5b04b622-8330-4869-913d-909ccb4d27d4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<a href="https://www.loom.com/share/bd5a31570d934deb92a44567fb011c96">
+    <p>Student Store - 17 June 2023 - Watch Video</p>
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/bd5a31570d934deb92a44567fb011c96-with-play.gif">
+  </a>
 
 ### Core Features
 
