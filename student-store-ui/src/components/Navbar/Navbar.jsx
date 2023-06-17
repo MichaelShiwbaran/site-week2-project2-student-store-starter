@@ -24,7 +24,7 @@ export default function Navbar() {
             <a href = "/#Contact">Contact Us</a>
           </li>
           <li>
-            <a href = "/#Buy">Buy Now</a>
+            <a href = "/#ProductGrid">Buy Now</a>
           </li>
         </ul>     
         </div>
