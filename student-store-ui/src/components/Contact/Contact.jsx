@@ -2,6 +2,7 @@ import React from 'react'
 import "./Contact.css"
 
 const Contact = () => {
+  // HTML tages needed for the contact section of the website
   return (
     <div id='Contact' className='contact'>
         <div className='content'>
