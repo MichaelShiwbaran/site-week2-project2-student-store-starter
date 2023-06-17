@@ -9,7 +9,6 @@ import Sidebar from "../Sidebar/Sidebar"
 
 export default function App() {
 
-
 const [products, setProducts] = useState([])
 const [isFetching, setIsFetching] = useState(false)
 const [error, setError] = useState(null)
@@ -21,7 +20,6 @@ const handleSearchValueChange = (event) => {
   event.preventDefault()
   setSearchValue(event.target.value)
 }
-
 
 
 useEffect(() => {
@@ -40,7 +38,6 @@ useEffect(() => {
   fetchProducts()
 }, []);
 console.log(products)
-
   return (
     <div className="app">
       <BrowserRouter>

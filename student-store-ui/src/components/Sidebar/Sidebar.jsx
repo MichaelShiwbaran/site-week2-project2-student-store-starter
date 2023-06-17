@@ -40,7 +40,7 @@ export default function Sidebar(props) {
             <div className="input-field">
               <label className="label">Email</label>
               <div className="control">
-              <input name="email" class="checkout-form-input" type="text" placeholder="Student Email" value=""/>
+              <input name="email" className="checkout-form-input" type="text" placeholder="Student Email" value=""/>
               </div>
               </div>
               <div className="field">
