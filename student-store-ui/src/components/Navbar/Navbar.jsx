@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 import "./Navbar.css"
 
 export default function Navbar() {
+
+  // HTML and React tags needed for the Navbar section of the webpage
   return (
     <nav className="navbar">
       <div className="content">
