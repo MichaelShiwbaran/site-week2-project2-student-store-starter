@@ -5,8 +5,10 @@ import RemoveFromShoppingCart from '../RemoveFromShoppingCart.jsx'
 
 const ProductCard = (props) => {
 console.log(props.itemCount)
+  // usestate to keep track of the number of items needed for shopping cart
 const [itemCount, setItemCount] = useState(0)
 
+  // using the props passed into this file to print out the necessary information for each product
   return (
     <div className='product-card'>
       <div className='picture'>
@@ -21,7 +23,7 @@ const [itemCount, setItemCount] = useState(0)
         </div>
         <div className='actions'>
           <div className='buttons'>
-            <button className='add' onClick={(event) => {AddToShoppingCart(
+            <button className='add' onClick={(event) => {AddToShoppingCart( // the add button puts this product into the shopping cart
               event,
               itemCount,
               setItemCount,
@@ -31,7 +33,7 @@ const [itemCount, setItemCount] = useState(0)
               )}}>
               <i className='material-icons'>add</i>
             </button>
-            <button className='remove' onClick={(event) => { itemCount > 0 && RemoveFromShoppingCart(
+            <button className='remove' onClick={(event) => { itemCount > 0 && RemoveFromShoppingCart( // the remove button removes this product from the shopping cart
               event,
               itemCount,
               setItemCount,
