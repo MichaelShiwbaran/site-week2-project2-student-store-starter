@@ -15,7 +15,7 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 
 ## *Week 2* Application Features
 
-### Video Walkthrough
+### Video Walkthrough {UPDATE}
 
 <a href="https://www.loom.com/share/bd5a31570d934deb92a44567fb011c96">
     <p>Student Store - 17 June 2023 - Watch Video</p>
