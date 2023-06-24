@@ -1,61 +1,61 @@
-import React, {useEffect , useState} from 'react'
-import "./ProductView.css"
-import axios from 'axios'
-import {useParams} from "react-router-dom"
-import AddToShoppingCart from '../AddToShoppingCart'
-import RemoveFromShoppingCart from '../RemoveFromShoppingCart'
-import ShoppingCart from '../ShoppingCart/ShoppingCart'
-import ProductCard from '../ProductCard/ProductCard'
+import React, { useEffect, useState } from "react";
+import "./ProductView.css";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import AddToShoppingCart from "../AddToShoppingCart";
+import RemoveFromShoppingCart from "../RemoveFromShoppingCart";
+import ShoppingCart from "../ShoppingCart/ShoppingCart";
+import ProductCard from "../ProductCard/ProductCard";
 
 const ProductView = (props) => {
-  let shopping_cart = props.shoppingCart
-  let setShopping_cart = props.setShoppingCart
-  console.log(props.product)
+  let shopping_cart = props.shoppingCart;
+  let setShopping_cart = props.setShoppingCart;
+  console.log(props.product);
   useEffect(() => {
     const fetchProducts = async () => {
-      props.setIsFetching(true)
-    axios.get('https://codepath-store-api.herokuapp.com/store').then((response) => {
-      props.setProducts(response.data.products)
-    })
-    .catch((error) => {
-      console.error(error);
-    })
-    .finally(() => {
-      props.setIsFetching(false)
-  })
-    }
-    fetchProducts()
+      props.setIsFetching(true);
+      axios
+        .get("http://localhost:3001/")
+        .then((response) => {
+          props.setProducts(response.data.products);
+        })
+        .catch((error) => {
+          console.error(error);
+        })
+        .finally(() => {
+          props.setIsFetching(false);
+        });
+    };
+    fetchProducts();
   }, []);
-  const {productID} = useParams()
-  console.log(productID)
-  let correctProduct = []
+  const { productID } = useParams();
+  console.log(productID);
+  let correctProduct = [];
   props.product.filter((product) => {
-      console.log(product.id == productID)
-      product.id == productID? correctProduct.push(product): null
-  })
-  correctProduct = correctProduct[0]
-  console.log(correctProduct)
-  if (props.product.length !== 0){
+    console.log(product.id == productID);
+    product.id == productID ? correctProduct.push(product) : null;
+  });
+  correctProduct = correctProduct[0];
+  console.log(correctProduct);
+  if (props.product.length !== 0) {
+    let product = props.product.filter(
+      (element, index) => element.id == productID
+    );
+    product = product[0];
 
-    let product = props.product.filter((element, index) => 
-          element.id == productID
-    )
-    product = product[0]
-  
     return (
       <div>
-      <div className='product-view'>
+        <div className="product-view">
+          <ProductCard
+            key={correctProduct.id}
+            product={correctProduct}
+            setProductData={props.setProducts}
+            shoppingCart={props.shoppingCart}
+            setShoppingCart={props.setShoppingCart}
+          />
+          <p className="desc">{correctProduct.description}</p>
 
-        <ProductCard 
-        key = {correctProduct.id}
-        product = {correctProduct}
-        setProductData = {props.setProducts}
-        shoppingCart = {props.shoppingCart}
-        setShoppingCart = {props.setShoppingCart}
-        />
-        <p className='desc'>{correctProduct.description}</p>
-
-        {/* <h1 className='product-id'>{`Product #: ${correctProduct.id}`}</h1>
+          {/* <h1 className='product-id'>{`Product #: ${correctProduct.id}`}</h1>
       </div>
       <div className='product-view-card'>
         <div className='product-card'>
@@ -98,11 +98,10 @@ const ProductView = (props) => {
           </div>
         </div>
         </div> */}
+        </div>
       </div>
-      </div>
-
-    )
+    );
   }
-}
+};
 
-export default ProductView
+export default ProductView;
