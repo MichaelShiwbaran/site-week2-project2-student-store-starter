@@ -74,3 +74,7 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 - [x] Build a page in the UI that displays the list of all past orders. The user should be able to click on any individual order to take them to a more detailed page of the transaction.
 - [ ] Allow users to use an input to filter orders by the email of the person who placed the order.
 - [ ] Your choice! (Replace this bullet explaining what you implemented. Example: Users can create a wish list of products they are interested in but not yet ready to purchase.)
+
+### Notes
+
+- I felt that the implemenation of the backend for the core features was very straightforward. We had many examples to use to our advantage and since we were only doing a little but of backend development, it didn't seem that bad. The stretch features are where the backend coding got difficult as he results I was getting in the front end was difficult to parse through and therefore many of the stretch features weren't implemented. I like how the the sidebar turned out and how the backend was able to work pretty efficiently in terms of posting and gettng the data I wanted. If I had more time I would definitely want to finish the stretch features as they seems doable, just tricky to use the data I was given.
