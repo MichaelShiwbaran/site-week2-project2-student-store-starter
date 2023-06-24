@@ -46,11 +46,16 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 
 ## _Week 3_ Application Features
 
-### Video Walkthrough
+### Video Walkthrough of Both the FrontEnd and BackEnd(Using PostMan)
 
 <a href="https://www.loom.com/share/bfe69ebd41b94476b8115228685eac0c">
     <p>Student Store - 24 June 2023 - Watch Video</p>
     <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/bfe69ebd41b94476b8115228685eac0c-with-play.gif">
+  </a>
+
+  <a href="https://www.loom.com/share/1dabd254a078414bb741c40e26757fa3">
+    <p>how to get stashed files in git - Google Search - 24 June 2023 - Watch Video</p>
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/1dabd254a078414bb741c40e26757fa3-with-play.gif">
   </a>
 
 ### Core Features
