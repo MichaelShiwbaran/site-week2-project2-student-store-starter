@@ -46,6 +46,8 @@ Check out our [deployed Student Store](https://codepath-student-store-demo.surge
 
 ## _Week 3_ Application Features
 
+# Time Spent in Total - {9 Hours}
+
 ### Video Walkthrough of Both the FrontEnd and BackEnd(Using PostMan)
 
 <a href="https://www.loom.com/share/bfe69ebd41b94476b8115228685eac0c">
