@@ -71,21 +71,6 @@ const ViewPurchases = (props) => {
                     </tr>
                   </table>
                 </Link>
-                {receipts &&
-                  receipt.shoppingCart.map((product, index) => (
-                    <table key={index}>
-                      <tr>
-                        <th>Item: </th>
-                        <th>Amount: </th>
-                        <th>Price: </th>
-                        <th>Cost: </th>
-                      </tr>
-                      <th>{product.productName}</th>
-                      <th>{product.itemCount}</th>
-                      <th>{product.productPrice}</th>
-                      <th>{product.productCost}</th>
-                    </table>
-                  ))}
               </div>
             )
           )

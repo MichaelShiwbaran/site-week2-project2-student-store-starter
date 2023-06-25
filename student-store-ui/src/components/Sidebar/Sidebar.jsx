@@ -29,6 +29,7 @@ export default function Sidebar(props) {
   const handleInputValues = async (value, setInputValues) => {
     setInputValues(value);
   };
+
   const handleCheckout = async (
     event,
     shoppingCart,
@@ -42,6 +43,9 @@ export default function Sidebar(props) {
   ) => {
     console.log("NAME", name);
     if (shoppingCartLength == 0) {
+      return null;
+    }
+    if (!document.getElementById("checkbox").checked) {
       return null;
     }
     if (name.trim().length !== 0 && email.trim().length !== 0) {
@@ -77,6 +81,15 @@ export default function Sidebar(props) {
                 !sidebar ? `notification closed` : `notification open center`
               }
             >
+              {props.shoppingCart.length < 1 && (
+                <h3>No Items In Shopping Cart!</h3>
+              )}
+            </div>
+            <div
+              className={
+                !sidebar ? `notification closed` : `notification open center`
+              }
+            >
               {props.shoppingCart.length > 0 && (
                 <ShoppingCart shoppingCart={props.shoppingCart} />
               )}
@@ -86,7 +99,9 @@ export default function Sidebar(props) {
                 !sidebar ? `notification closed` : `notification open `
               }
             >
-              <ShoppingCartTotal shoppingCart={props.shoppingCart} />
+              {props.shoppingCart.length > 0 && (
+                <ShoppingCartTotal shoppingCart={props.shoppingCart} />
+              )}
             </div>
             <div
               className={
@@ -95,7 +110,9 @@ export default function Sidebar(props) {
             >
               <h3>Payment Info</h3>
               <div className="input-field">
-                <label className="label">Name</label>
+                <label name="name" className="label">
+                  Name
+                </label>
                 <div className="control">
                   <input
                     name="name"
@@ -108,7 +125,9 @@ export default function Sidebar(props) {
                 </div>
               </div>
               <div className="input-field">
-                <label className="label">Email</label>
+                <label name="email" className="label">
+                  Email
+                </label>
                 <div className="control">
                   <input
                     name="email"
@@ -125,7 +144,11 @@ export default function Sidebar(props) {
               <div className="field">
                 <div className="control">
                   <label className="checkbox">
-                    <input name="tersAndConditions" type="checkbox" />
+                    <input
+                      id="checkbox"
+                      name="tersAndConditions"
+                      type="checkbox"
+                    />
                     <span className="label">
                       I agree to the
                       <a href="#terms-and-conditions"> terms and conditions</a>

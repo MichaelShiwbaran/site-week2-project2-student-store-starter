@@ -9,6 +9,7 @@ const ReceiptCard = (props) => {
     <div className="receipt-card">
       <Navbar />
       <Hero />
+      <h1>Receipt Information for {props.receipt.email}:</h1>
       <table>
         <tr>
           <th>Name: </th>
