@@ -20,16 +20,24 @@ const getSpecificPurchase = (orderID) => {
 };
 
 const addToPurchases = (shoppingCart, name, email) => {
-  console.log("first inside of shoppingcart", shoppingCart);
-  const purchases = productObj.purchases;
-  const receiptID = purchases.length + 1;
-  const receipt = {};
-  receipt[receiptID] = { name: name, email: email, shoppingCart: shoppingCart };
-  console.log("inside of addtopurchase:", receipt);
-  purchases.push(receipt);
-  productObj["purchases"] = purchases;
-  console.log("Product object key purchases value:", productObj["purchases"]);
-  return purchases;
+  if (name && email && Object.keys(shoppingCart).length > 0) {
+    console.log("first inside of shoppingcart", shoppingCart);
+    const purchases = productObj.purchases;
+    const receiptID = purchases.length + 1;
+    const receipt = {};
+    receipt[receiptID] = {
+      name: name,
+      email: email,
+      shoppingCart: shoppingCart,
+      time: new Date().toLocaleTimeString(),
+      date: new Date().toLocaleDateString(),
+    };
+    console.log("inside of addtopurchase:", receipt);
+    purchases.push(receipt);
+    productObj["purchases"] = purchases;
+    console.log("Product object key purchases value:", productObj["purchases"]);
+    return purchases;
+  }
 };
 
 const getLastReceipt = () => {
@@ -45,10 +53,22 @@ const getLastReceipt = () => {
 };
 
 const getAllReceipts = () => {
-  const receipts = productObj.purchases;
+  const purchases = productObj.purchases;
+  let receipts = [];
+  for (let i = 0; i < purchases.length; i++) {
+    const receipt = purchases[i];
+    console.log("receipt", receipt);
+    console.log("I", i);
+    let index = i + 1;
+    const receiptID = "" + index;
+    console.log("receiptID", receiptID);
+    const receiptObject = receipt[receiptID];
+    console.log("receiptObject", receiptObject);
+    receipts.push(receiptObject);
+  }
+  console.log(receipts);
   return receipts;
 };
-
 module.exports = {
   getProductList,
   getproduct,

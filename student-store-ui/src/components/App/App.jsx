@@ -7,6 +7,8 @@ import ProductDetail from "../ProductDetail/ProductDetail";
 import "./App.css";
 import Sidebar from "../Sidebar/Sidebar";
 import ViewPurchases from "../ViewPurchases/ViewPurchases";
+import GetAllReceipts from "../Sidebar/GetAllReceipts";
+import ReceiptDetails from "../ReceiptDetails/ReceiptDetails";
 
 export default function App() {
   const [products, setProducts] = useState([]);
@@ -40,6 +42,7 @@ export default function App() {
     fetchProducts();
   }, []);
   console.log(products);
+
   return (
     <div className="app">
       <BrowserRouter>
@@ -77,6 +80,7 @@ export default function App() {
               />
             }
           />
+          <Route path="/receipt/:date/:time" element={<ReceiptDetails />} />
           <Route
             path="/checkout"
             element={<ViewPurchases viewAllReceipts={viewAllReceipts} />}

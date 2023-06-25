@@ -179,14 +179,7 @@ export default function Sidebar(props) {
             className={sidebar ? `checkout-form open` : `checkout-form closed`}
           >
             <Link to={`/checkout`}>
-              <button
-                className="button checkout-button"
-                onClick={(event) => {
-                  handleViewPurchases(event, props.setViewAllReceipts);
-                }}
-              >
-                View Purchases
-              </button>
+              <button className="button checkout-button">View Purchases</button>
             </Link>
           </div>
           <div className="cart-icons">
